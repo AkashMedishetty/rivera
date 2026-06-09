@@ -59,10 +59,7 @@ export function ServicesSection() {
                 ].join(" ")}
                 style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }}
               />
-              <p className="font-mono text-[0.74rem] tracking-[0.18em] text-[var(--color-ink-faint)]">
-                {s.number} · Service
-              </p>
-              <h3 className="mt-4 font-display text-[1.8rem] md:text-[2rem] leading-tight tracking-[-0.018em] group-hover:text-[var(--color-teal-700)] transition-colors">
+              <h3 className="font-display text-[1.8rem] md:text-[2rem] leading-tight tracking-[-0.018em] group-hover:text-[var(--color-teal-700)] transition-colors">
                 {s.title}
               </h3>
               <p className="mt-4 text-[0.96rem] leading-[1.6] text-[var(--color-ink-soft)]">

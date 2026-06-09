@@ -58,9 +58,6 @@ export function ProcessSection() {
               transition={{ duration: 0.9, delay: i * 0.1, ease: EASE }}
               className="relative border-t border-[color:color-mix(in_oklab,var(--color-paper)_25%,transparent)] pt-6"
             >
-              <span className="absolute -top-3 left-0 inline-flex items-center gap-2 bg-[var(--color-ink)] pr-3 font-mono text-[0.72rem] tracking-[0.2em] text-[var(--color-teal-200)]">
-                STEP {step.number}
-              </span>
               <h3 className="font-display text-[1.8rem] md:text-[2rem] leading-tight tracking-[-0.015em] text-[var(--color-paper)]">
                 {step.title}
               </h3>

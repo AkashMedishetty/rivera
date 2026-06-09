@@ -18,7 +18,7 @@ export default function ProductsPage() {
       <section className="relative pt-32 pb-12 md:pt-40 md:pb-20">
         <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-x-6 px-5 md:px-10">
           <div className="col-span-12 md:col-span-8">
-            <p className="kicker text-[var(--color-teal-700)]">Catalogue · 10 layers</p>
+            <p className="kicker text-[var(--color-teal-700)]">Catalogue</p>
             <h1 className="mt-5 font-display text-[2.6rem] sm:text-[4rem] md:text-[5.6rem] leading-[1.02] md:leading-[0.98] tracking-[-0.025em]">
               The gift, <span className="display-italic text-[var(--color-teal-700)]">opened up.</span>
             </h1>
@@ -34,12 +34,9 @@ export default function ProductsPage() {
 
         <div className="mx-auto max-w-[1440px] mt-12 md:mt-16 px-5 md:px-10">
           <ul className="flex flex-wrap gap-x-6 gap-y-3 border-t border-[color:color-mix(in_oklab,var(--color-ink)_12%,transparent)] pt-6">
-            {categories.map((c, i) => (
+            {categories.map((c) => (
               <li key={c.slug}>
-                <a href={`#${c.slug}`} className="group inline-flex items-baseline gap-2 text-[0.86rem]">
-                  <span className="font-mono text-[0.66rem] text-[var(--color-ink-faint)]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+                <a href={`#${c.slug}`} className="text-[0.92rem]">
                   <span className="link-ribbon">{c.title}</span>
                 </a>
               </li>
@@ -95,13 +92,8 @@ export default function ProductsPage() {
                       isEven ? "md:col-start-8" : "md:order-1 md:col-start-2"
                     } md:self-center`}
                   >
-                    <div className="flex items-center gap-4">
-                      <span className="font-mono text-[0.72rem] text-[var(--color-ink-faint)]">
-                        {String(i + 1).padStart(2, "0")} / {categories.length}
-                      </span>
-                      <span className="block h-px w-10 bg-[var(--color-teal-600)]" />
-                    </div>
-                    <h2 className="mt-4 font-display text-[2.4rem] md:text-[3.4rem] leading-[1] tracking-[-0.02em]">
+                    <span className="block h-px w-12 bg-[var(--color-teal-600)]" />
+                    <h2 className="mt-5 font-display text-[2.4rem] md:text-[3.4rem] leading-[1] tracking-[-0.02em]">
                       {c.title}
                     </h2>
                     <p className="mt-5 max-w-prose text-[1.02rem] leading-[1.65] text-[var(--color-ink-soft)]">

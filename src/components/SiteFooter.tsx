@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/data/site";
 import { categories } from "@/data/products";
 
@@ -18,10 +19,19 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1440px] px-5 pb-12 pt-12 md:px-10 md:pt-20 md:pb-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <p className="kicker text-[var(--color-teal-200)]">
-              Rivera Gifting · est. {site.foundedYear}
-            </p>
-            <p className="mt-5 font-display text-[2.2rem] md:text-[3.2rem] leading-[1.04] md:leading-[1] tracking-[-0.02em] text-[var(--color-paper)]">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/logo-mark.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-12 w-12 shrink-0 opacity-90"
+              />
+              <p className="kicker text-[var(--color-teal-200)]">
+                Rivera Gifting · est. {site.foundedYear}
+              </p>
+            </div>
+            <p className="mt-7 font-display text-[2.2rem] md:text-[3.2rem] leading-[1.04] md:leading-[1] tracking-[-0.02em] text-[var(--color-paper)]">
               The first layer of a great gift{" "}
               <span className="display-italic text-[var(--color-teal-200)]">is the thought.</span>
             </p>

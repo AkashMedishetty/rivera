@@ -42,24 +42,20 @@ export function SiteHeader() {
 
           <nav aria-label="Primary" className="hidden md:block">
             <ul className="flex items-center gap-9 text-[0.86rem] tracking-[0.01em]">
-              {site.nav.map((item, idx) => {
+              {site.nav.map((item) => {
                 const active = pathname === item.href;
                 return (
                   <li key={item.href}>
-                    <Link href={item.href} className="group relative inline-flex items-center">
-                      <span className="mr-2 font-mono text-[0.6rem] text-[var(--color-ink-faint)]">
-                        {String(idx + 1).padStart(2, "0")}
-                      </span>
-                      <span
-                        className={[
-                          "link-ribbon transition-colors",
-                          active
-                            ? "text-[var(--color-teal-700)]"
-                            : "text-[var(--color-ink)] group-hover:text-[var(--color-teal-700)]",
-                        ].join(" ")}
-                      >
-                        {item.label}
-                      </span>
+                    <Link
+                      href={item.href}
+                      className={[
+                        "link-ribbon transition-colors",
+                        active
+                          ? "text-[var(--color-teal-700)]"
+                          : "text-[var(--color-ink)] hover:text-[var(--color-teal-700)]",
+                      ].join(" ")}
+                    >
+                      {item.label}
                     </Link>
                   </li>
                 );
@@ -127,11 +123,8 @@ export function SiteHeader() {
                   transition={{ delay: 0.08 * i, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                   className="border-b border-[color:color-mix(in_oklab,var(--color-ink)_10%,transparent)]"
                 >
-                  <Link href={item.href} className="flex items-baseline justify-between py-5">
+                  <Link href={item.href} className="block py-5">
                     <span className="font-display text-[2.4rem] leading-none">{item.label}</span>
-                    <span className="font-mono text-[0.7rem] text-[var(--color-ink-faint)]">
-                      0{i + 1}
-                    </span>
                   </Link>
                 </motion.div>
               ))}

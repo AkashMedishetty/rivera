@@ -17,9 +17,7 @@ export default function ServicesPage() {
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-x-6 px-5 md:px-10">
           <div className="col-span-12 md:col-span-8">
-            <p className="kicker text-[var(--color-teal-700)]">
-              Services · Six layers of support
-            </p>
+            <p className="kicker text-[var(--color-teal-700)]">Services</p>
             <h1 className="mt-6 font-display text-[2.6rem] sm:text-[4rem] md:text-[5.6rem] leading-[1.02] md:leading-[0.98] tracking-[-0.025em]">
               <span className="block overflow-hidden">
                 <UnwrapText text="More than" />
@@ -49,10 +47,7 @@ export default function ServicesPage() {
           <ul className="flex flex-wrap gap-x-6 gap-y-3 border-t border-[color:color-mix(in_oklab,var(--color-ink)_12%,transparent)] pt-6">
             {services.map((s) => (
               <li key={s.slug}>
-                <a href={`#${s.slug}`} className="group inline-flex items-baseline gap-2 text-[0.86rem]">
-                  <span className="font-mono text-[0.66rem] text-[var(--color-ink-faint)]">
-                    {s.number}
-                  </span>
+                <a href={`#${s.slug}`} className="text-[0.92rem]">
                   <span className="link-ribbon">{s.title}</span>
                 </a>
               </li>
@@ -74,13 +69,10 @@ export default function ServicesPage() {
               >
                 <div className="grid grid-cols-12 gap-x-6 gap-y-10">
                   <Reveal as="div" className={`col-span-12 md:col-span-3 ${isEven ? "" : "md:col-start-10 md:order-2"}`}>
-                    <p className="font-mono text-[0.74rem] tracking-[0.22em] text-[var(--color-ink-faint)]">
-                      Service {s.number}
-                    </p>
                     <span
                       aria-hidden="true"
                       className={[
-                        "mt-4 inline-block h-2 w-12",
+                        "inline-block h-2 w-12",
                         s.accent === "teal"
                           ? "bg-[var(--color-teal-700)]"
                           : s.accent === "kraft"

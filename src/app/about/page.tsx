@@ -114,14 +114,7 @@ export default function AboutPage() {
                   className="absolute -left-[5px] top-16 h-2.5 w-2.5 rotate-45 bg-[var(--color-teal-700)] md:left-[calc(8.33%-5px)]"
                 />
 
-                <Reveal as="div" className="col-span-12 md:col-span-3 md:col-start-2">
-                  <p className="kicker text-[var(--color-teal-700)]">{c.no}</p>
-                  <p className="mt-3 font-mono text-[0.78rem] text-[var(--color-ink-faint)]">
-                    {String(i + 1).padStart(2, "0")} / {chapters.length}
-                  </p>
-                </Reveal>
-
-                <Reveal as="div" delay={0.1} className="col-span-12 md:col-span-5 mt-6 md:mt-0">
+                <Reveal as="div" delay={0.1} className="col-span-12 md:col-span-8 md:col-start-2 mt-0">
                   <h3 className="font-display text-[1.9rem] md:text-[2.5rem] leading-[1.05] tracking-[-0.018em]">
                     {c.title}
                   </h3>
@@ -163,10 +156,7 @@ export default function AboutPage() {
           <div className="mt-14 md:mt-20 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
             {principles.map((p, i) => (
               <Reveal key={p.title} as="div" delay={i * 0.08}>
-                <p className="font-mono text-[0.72rem] text-[var(--color-ink-faint)]">
-                  P/{String(i + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-3 font-display text-[1.6rem] leading-tight tracking-[-0.015em]">
+                <h3 className="font-display text-[1.6rem] leading-tight tracking-[-0.015em]">
                   {p.title}
                 </h3>
                 <p className="mt-3 text-[0.96rem] leading-[1.65] text-[var(--color-ink-soft)]">
@@ -197,19 +187,14 @@ export default function AboutPage() {
                 key={s.sector}
                 as="li"
                 delay={i * 0.04}
-                className="group flex items-start gap-6 border-t border-[color:color-mix(in_oklab,var(--color-ink)_12%,transparent)] py-7 last:border-b md:[&:nth-child(2)]:border-t md:[&:nth-last-child(2)]:border-b-0"
+                className="group border-t border-[color:color-mix(in_oklab,var(--color-ink)_12%,transparent)] py-7 last:border-b md:[&:nth-child(2)]:border-t md:[&:nth-last-child(2)]:border-b-0"
               >
-                <span className="font-mono text-[0.72rem] pt-2 text-[var(--color-ink-faint)] shrink-0 w-10">
-                  S/{String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="flex-1">
-                  <h3 className="font-display text-[1.6rem] tracking-[-0.015em] group-hover:text-[var(--color-teal-700)] transition-colors">
-                    {s.sector}
-                  </h3>
-                  <p className="mt-1 text-[0.94rem] leading-[1.65] text-[var(--color-ink-soft)]">
-                    {s.blurb}
-                  </p>
-                </div>
+                <h3 className="font-display text-[1.6rem] tracking-[-0.015em] group-hover:text-[var(--color-teal-700)] transition-colors">
+                  {s.sector}
+                </h3>
+                <p className="mt-1 text-[0.94rem] leading-[1.65] text-[var(--color-ink-soft)]">
+                  {s.blurb}
+                </p>
               </Reveal>
             ))}
           </ul>

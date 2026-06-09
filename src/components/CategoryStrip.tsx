@@ -76,14 +76,9 @@ export function CategoryStrip() {
                     <span className="block h-px w-6 bg-current" />
                   </span>
                 </div>
-                <div className="mt-5 flex items-baseline justify-between">
-                  <h3 className="font-display text-[1.6rem] leading-tight tracking-[-0.015em] group-hover:text-[var(--color-teal-700)] transition-colors">
-                    {c.title}
-                  </h3>
-                  <span className="font-mono text-[0.7rem] text-[var(--color-ink-faint)]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
+                <h3 className="mt-5 font-display text-[1.6rem] leading-tight tracking-[-0.015em] group-hover:text-[var(--color-teal-700)] transition-colors">
+                  {c.title}
+                </h3>
                 <p className="mt-2 max-w-[36ch] text-[0.94rem] leading-snug text-[var(--color-ink-soft)]">
                   {c.intro}
                 </p>

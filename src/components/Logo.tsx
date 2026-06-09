@@ -1,52 +1,44 @@
 import Link from "next/link";
+import Image from "next/image";
 
-export function Logo({ className = "" }: { className?: string }) {
+export function Logo({
+  className = "",
+  variant = "default",
+}: {
+  className?: string;
+  variant?: "default" | "light";
+}) {
+  const textColor = variant === "light" ? "var(--color-paper)" : "var(--color-ink)";
+  const subColor =
+    variant === "light"
+      ? "color-mix(in oklab, var(--color-paper) 70%, transparent)"
+      : "var(--color-ink-faint)";
+
   return (
     <Link
       href="/"
       aria-label="Rivera Gifting — home"
       className={`group inline-flex items-center gap-3 ${className}`}
     >
-      {/* Refined ribbon mark — a single tied loop, more elegant */}
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <g className="text-[var(--color-teal-700)]">
-          <path
-            d="M5 18 C 10 8, 18 8, 18 16 C 18 24, 26 24, 31 14"
-            stroke="currentColor"
-            strokeWidth="1.3"
-            strokeLinecap="round"
-            fill="none"
-            className="transition-transform duration-[800ms] ease-[var(--ease-unwrap)] group-hover:[stroke-dasharray:0] origin-center"
-          />
-          <path
-            d="M18 16 L 14 26"
-            stroke="currentColor"
-            strokeWidth="1.3"
-            strokeLinecap="round"
-            opacity="0.55"
-          />
-          <path
-            d="M18 16 L 22 26"
-            stroke="currentColor"
-            strokeWidth="1.3"
-            strokeLinecap="round"
-            opacity="0.55"
-          />
-        </g>
-        <circle cx="18" cy="16" r="1.2" className="fill-[var(--color-ink)]" />
-      </svg>
+      <Image
+        src="/logo-mark.png"
+        alt=""
+        width={40}
+        height={40}
+        priority
+        className="h-9 w-9 shrink-0 transition-transform duration-700 ease-[var(--ease-unwrap)] group-hover:-rotate-[6deg]"
+      />
       <span className="flex items-baseline gap-1.5">
-        <span className="font-display text-[1.3rem] leading-none tracking-[-0.01em] text-[var(--color-ink)]">
+        <span
+          className="font-display text-[1.3rem] leading-none tracking-[-0.01em]"
+          style={{ color: textColor }}
+        >
           Rivera
         </span>
-        <span className="font-sans text-[0.65rem] uppercase tracking-[0.32em] text-[var(--color-ink-faint)] pb-[2px]">
+        <span
+          className="font-sans text-[0.65rem] uppercase tracking-[0.32em] pb-[2px]"
+          style={{ color: subColor }}
+        >
           Gifting
         </span>
       </span>

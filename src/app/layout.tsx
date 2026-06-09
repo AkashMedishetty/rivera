@@ -31,7 +31,19 @@ export const metadata: Metadata = {
     description:
       "Premium corporate hampers, branded merchandise and eco-conscious essentials.",
     type: "website",
+    images: [{ url: "/icon-512.png", width: 512, height: 512, alt: "Rivera Gifting" }],
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon-32.png",
+  },
+  manifest: "/manifest.webmanifest",
   metadataBase: new URL("https://riveragifting.com"),
 };
 

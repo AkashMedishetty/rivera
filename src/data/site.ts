@@ -2,8 +2,8 @@ export const site = {
   name: "Rivera Gifting",
   tagline: "From sustainable essentials to unforgettable experiences.",
   foundedYear: 2023,
-  email: "hello@riveragifting.com",
-  phone: "+91 00000 00000",
+  email: "vamshith@riveragifting.com",
+  phone: "+91 77027 33370",
   location: "India",
   social: [
     { label: "Instagram", href: "#" },
