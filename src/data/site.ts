@@ -3,8 +3,13 @@ export const site = {
   tagline: "From sustainable essentials to unforgettable experiences.",
   foundedYear: 2023,
   email: "vamshith@riveragifting.com",
-  phone: "+91 77027 33370",
+  phone: "+91 90638 73370",
   location: "India",
+  legalName: "Rivera Gifting by N3 industries",
+  address: {
+    line1: "Sy no 243/3, Khajiguda, Gundlapochampally",
+    line2: "Medchal - Malkajgiri, Telangana, 500014",
+  },
   social: [
     { label: "Instagram", href: "#" },
     { label: "LinkedIn", href: "#" },

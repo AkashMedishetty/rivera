@@ -83,8 +83,12 @@ export function SiteFooter() {
                   {site.phone}
                 </a>
               </li>
-              <li className="text-[color:color-mix(in_oklab,var(--color-paper)_60%,transparent)]">
-                {site.location}
+              <li className="text-[color:color-mix(in_oklab,var(--color-paper)_60%,transparent)] not-italic">
+                <address className="not-italic leading-relaxed">
+                  {site.address.line1}
+                  <br />
+                  {site.address.line2}
+                </address>
               </li>
             </ul>
             <div className="mt-6 flex gap-4">
@@ -101,16 +105,29 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-[color:color-mix(in_oklab,var(--color-paper)_18%,transparent)] pt-8 md:flex-row md:items-center">
+        <div className="mt-16 border-t border-[color:color-mix(in_oklab,var(--color-paper)_18%,transparent)] pt-10">
           <p className="font-display text-2xl tracking-[-0.01em]">
             Planning a gifting moment?{" "}
             <Link href="/contact" className="display-italic text-[var(--color-teal-200)] link-ribbon">
               Let&apos;s talk.
             </Link>
           </p>
-          <p className="text-[0.7rem] tracking-[0.22em] uppercase text-[color:color-mix(in_oklab,var(--color-paper)_55%,transparent)]">
-            © 2026 Rivera Gifting · All rights reserved
-          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-y-6 md:grid-cols-12 md:items-start md:gap-x-6">
+            <div className="md:col-span-7">
+              <p className="text-[0.74rem] tracking-[0.22em] uppercase text-[var(--color-teal-200)]">
+                {site.legalName}
+              </p>
+              <address className="mt-2 not-italic text-[0.82rem] leading-relaxed text-[color:color-mix(in_oklab,var(--color-paper)_70%,transparent)]">
+                {site.address.line1}
+                <br />
+                {site.address.line2}
+              </address>
+            </div>
+            <p className="text-[0.7rem] tracking-[0.22em] uppercase text-[color:color-mix(in_oklab,var(--color-paper)_55%,transparent)] md:col-span-5 md:text-right">
+              © 2026 Rivera Gifting · All rights reserved
+            </p>
+          </div>
         </div>
       </div>
     </footer>
