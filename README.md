@@ -25,6 +25,18 @@ npm run build    # static production build
 npm run start    # serve the production build
 ```
 
+## Contact form setup
+
+The enquiry form on `/contact` posts to [Web3Forms](https://web3forms.com) and they email each submission to the address that owns the access key.
+
+One-time setup:
+1. Go to https://web3forms.com and sign up with **vamshith@riveragifting.com**.
+2. Copy the access key they give you.
+3. **Local**: copy `.env.example` → `.env.local` and paste the key into `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
+4. **Vercel**: Project → Settings → Environment Variables → add `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` for Production (and Preview if you want). Redeploy.
+
+Until the key is set the form shows a setup-needed notice and the submit button is disabled.
+
 ## Imagery
 
 All product photography is sourced from Unsplash under the free [Unsplash License](https://unsplash.com/license). Photos are loaded via `images.unsplash.com` and served through the Next.js `<Image>` component.
