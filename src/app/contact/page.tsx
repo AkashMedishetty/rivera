@@ -71,10 +71,7 @@ export default function ContactPage() {
           className="col-span-12 md:col-span-6 md:col-start-7 mt-16 md:mt-2 rounded-sm bg-[var(--color-paper-2)] p-7 md:p-12"
         >
           <p className="kicker text-[var(--color-teal-700)]">Enquiry form</p>
-          <h2 className="mt-3 font-display text-[1.8rem] tracking-[-0.015em]">
-            A few details and we&apos;ll come back with a proposal.
-          </h2>
-          <div className="mt-8">
+          <div className="mt-10">
             <Suspense
               fallback={
                 <p className="text-sm text-[var(--color-ink-faint)]">Loading form…</p>

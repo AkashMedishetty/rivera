@@ -91,17 +91,6 @@ export function SiteFooter() {
                 </address>
               </li>
             </ul>
-            <div className="mt-6 flex gap-4">
-              {site.social.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  className="text-xs uppercase tracking-[0.18em] hover:text-[var(--color-teal-200)]"
-                >
-                  {s.label}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 

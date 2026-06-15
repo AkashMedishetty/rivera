@@ -133,7 +133,7 @@ export function ContactForm() {
 
       <div className="md:col-span-2 mt-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-[0.78rem] text-[var(--color-ink-faint)] max-w-md">
-          We&apos;ll reply to {site.email} within one business day.
+          We&apos;ll get back to you within one business day.
         </p>
         <button
           type="submit"

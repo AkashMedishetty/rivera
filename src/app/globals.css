@@ -90,7 +90,7 @@ html.lenis body {
 
 .display-italic {
   font-style: italic;
-  font-variation-settings: "SOFT" 40, "WONK" 1;
+  font-variation-settings: "SOFT" 30, "WONK" 0;
 }
 
 /* Eyebrow / kicker label */

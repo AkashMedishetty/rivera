@@ -10,10 +10,6 @@ export const site = {
     line1: "Sy no 243/3, Khajiguda, Gundlapochampally",
     line2: "Medchal - Malkajgiri, Telangana, 500014",
   },
-  social: [
-    { label: "Instagram", href: "#" },
-    { label: "LinkedIn", href: "#" },
-  ],
   nav: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },

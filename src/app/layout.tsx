@@ -21,13 +21,13 @@ const hanken = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "Rivera Gifting — Considered corporate gifting, layered with intent",
+    default: "Rivera Gifting — A gift for every moment that matters",
     template: "%s · Rivera Gifting",
   },
   description:
     "Rivera Gifting designs and delivers premium corporate hampers, branded merchandise and eco-conscious essentials for real estate, hospitality and corporate brands.",
   openGraph: {
-    title: "Rivera Gifting — Considered corporate gifting, layered with intent",
+    title: "Rivera Gifting — A gift for every moment that matters",
     description:
       "Premium corporate hampers, branded merchandise and eco-conscious essentials.",
     type: "website",

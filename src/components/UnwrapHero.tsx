@@ -51,15 +51,15 @@ export function UnwrapHero() {
           </motion.p>
         </div>
 
-        {/* Headline — descender-safe line-height, indents only at md+ */}
+        {/* Headline — echoes the brand tagline, with one clean italic accent */}
         <h1 className="col-span-12 md:col-span-9 font-display text-[3rem] sm:text-[4.4rem] md:text-[6.4rem] lg:text-[7.8rem] leading-[1] md:leading-[0.96] tracking-[-0.026em] text-[var(--color-ink)]">
-          <Line delay={0.15}>Considered</Line>
+          <Line delay={0.15}>A gift,</Line>
           <Line delay={0.3} className="md:pl-[12%]">
-            <span className="display-italic text-[var(--color-teal-700)]">gifting,</span>
+            for every
           </Line>
-          <Line delay={0.45}>layered with</Line>
+          <Line delay={0.45}>moment that</Line>
           <Line delay={0.6} className="md:pl-[22%]">
-            intent.
+            <span className="display-italic text-[var(--color-teal-700)]">matters.</span>
           </Line>
         </h1>
 
