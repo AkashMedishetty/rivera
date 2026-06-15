@@ -58,8 +58,9 @@ export function UnwrapText({
         <span
           key={i}
           aria-hidden="true"
-          // pb gives descenders room; align-baseline keeps lines flush
-          className="inline-block overflow-hidden align-baseline pb-[0.14em]"
+          // pt + pb give ascenders (f, h, l) and descenders (g, y, p) room
+          // to render inside the overflow-hidden slide-up clip.
+          className="inline-block overflow-hidden align-baseline pt-[0.18em] pb-[0.18em]"
         >
           <motion.span
             className="inline-block whitespace-pre"

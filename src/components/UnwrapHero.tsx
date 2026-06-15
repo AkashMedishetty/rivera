@@ -52,7 +52,7 @@ export function UnwrapHero() {
         </div>
 
         {/* Headline — echoes the brand tagline, with one clean italic accent */}
-        <h1 className="col-span-12 md:col-span-9 font-display text-[3rem] sm:text-[4.4rem] md:text-[6.4rem] lg:text-[7.8rem] leading-[1] md:leading-[0.96] tracking-[-0.026em] text-[var(--color-ink)]">
+        <h1 className="col-span-12 md:col-span-9 font-display text-[3rem] sm:text-[4.4rem] md:text-[6.4rem] lg:text-[7.8rem] leading-[1.08] md:leading-[1.02] tracking-[-0.026em] text-[var(--color-ink)]">
           <Line delay={0.15}>A gift,</Line>
           <Line delay={0.3} className="md:pl-[12%]">
             for every
@@ -166,8 +166,9 @@ function Line({
   className?: string;
 }) {
   return (
-    // pb-[0.12em] on the clipping span gives descenders (g, y, p) room to render
-    <span className={`block overflow-hidden pb-[0.12em] ${className}`}>
+    // pt + pb give ascenders (f, h, l) and descenders (g, y, p) room to render
+    // inside the overflow-hidden clip used for the slide-up reveal.
+    <span className={`block overflow-hidden pt-[0.16em] pb-[0.16em] ${className}`}>
       <motion.span
         initial={{ y: "115%" }}
         animate={{ y: "0%" }}
